@@ -24,7 +24,9 @@ const Task = ({ taskObj, onComplete }) => {
   return (
     <div className="task">
       <h3>{taskObj.title}</h3>
-      <div className="deadline">son teslim: <span>{taskObj.deadline}</span></div>
+      <div className="deadline">
+        son teslim: <span className={deadlineStyle}>{left}</span>
+      </div>
       <p>{taskObj.description}</p>
       <div>
         {taskObj.people.map((p) => (
