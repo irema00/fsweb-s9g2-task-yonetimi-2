@@ -1,127 +1,144 @@
 /* LAYOUT */
 .app {
-  height: 100vh;
-  display: flex;
+  /* height: 100vh;
+  display: flex; */
+  @apply h-screen flex;
 }
 
 .columns {
-  flex: 1;
+  /* flex: 1;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 2rem 1.5rem;
   gap: 2rem;
-  overflow: auto;
+  overflow: auto; */
+
+  @apply flex-1 flex justify-center flex-wrap p-8 gap-8 overflow-auto;
 }
 
 .column {
-  flex: 1;
+  /* flex: 1;
   min-width: 240px;
-  max-width: 360px;
+  max-width: 360px; */
+  @apply flex-1 min-w-[240px] max-w-[360px];
 }
 
 .formColumn {
-  background-color: #fff;
+  /* background-color: #fff;
   flex: 0 0 360px;
   border-right: 1px solid #f3d4b0;
-  overflow: auto;
+  overflow: auto; */
+  @apply bg-white flex-none w-[360px] border-r border-[#f3d4b0] overflow-auto;
 }
 
 .column-title {
-  font-size: 1.5rem;
-  padding-left: 0.75rem;
+  /* font-size: 1.5rem;
+  padding-left: 0.75rem; */
+  @apply text-2xl pl-3;
 }
 /* LAYOUT */
 
 /* TASK */
 .task {
-  padding: 1.5rem;
+  /* padding: 1.5rem;
   background-color: #fff;
   border-radius: 5px;
   line-height: 1.5;
   margin-top: 1rem;
-  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 10%); */
+  @apply p-5 bg-white rounded-md leading-5 mt-5 shadow-[0_4px_5px_0_rgba(0,0,0,0.10)];
 }
 
 .task h3 {
-  font-size: 18px;
-  color: #c8781a;
+  /* font-size: 18px;
+  color: #c8781a; */
+  @apply text-lg text-[#c8781a];
 }
 
 .task p {
-  padding: 0.5rem 0 0.75rem;
+  /* padding: 0.5rem 0 0.75rem;
   font-size: 14px;
-  color: #444;
+  color: #444; */
+  @apply py-3 pt-2 text-sm text-gray-600;
 }
 
 .task button {
-  display: block;
+  /* display: block;
   padding: 8px 12px;
   margin-left: auto;
   background-color: #fecc91;
   box-shadow: 0 4px 5px 0 rgb(0 0 0 / 5%);
   border-radius: 3px;
   border: 0;
-  cursor: pointer;
+  cursor: pointer; */
+  @apply block px-3 py-2 ml-auto bg-[#fecc91] shadow-[0_4px_5px_0_rgba(0,0,0,0.05)] rounded-md border-0 cursor-pointer;
 }
 
 .pill {
-  display: inline-block;
+  /* display: inline-block;
   padding: 5px 12px;
   font-size: 14px;
   border: 1px solid #ccc;
   margin-right: 4px;
   margin-bottom: 6px;
-  border-radius: 30px;
+  border-radius: 30px; */
+  @apply inline-block px-3 py-1 text-sm border border-solid border-gray-300 mr-1 mb-1.5 rounded-full;
 }
 
 .deadline {
-  font-size: 12px;
-  padding-top: 4px;
+ @apply text-xs pt-1;
 }
 
 .deadline span {
-  padding: 3px 8px;
+  /* padding: 3px 8px;
   border-radius: 2px;
-  display: inline-block;
+  display: inline-block; */
+  @apply px-2 py-1 rounded inline-block;
 }
 
 .normal {
-  background-color: #ffd9d4;
+  /* background-color: #ffd9d4; */
+  @apply bg-[#ffd9d4];
 }
 .urgent {
-  background-color: #d4d7ff;
+  /* background-color: #d4d7ff; */
+  @apply bg-[#d4d7ff];
 }
 /* TASK */
 
 /* FORM */
 .form-container {
-  padding: 2rem 2rem 1.5rem;
-  border-bottom: 1px solid #ddd;
+  /* padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid #ddd; */
+  @apply p-8 border-b border-gray-300;
 }
 
 .form-container h2 {
-  font-size: 1.5rem;
-  padding-bottom: 0.5rem;
+  /* font-size: 1.5rem;
+  padding-bottom: 0.5rem; */
+  @apply text-2xl pb-2;
 }
 
 .form-line {
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
+  @apply pt-4;
 }
 
 .input-text,
 .input-textarea {
-  display: block;
+  /* display: block;
   width: 100%;
   border: 1px solid #ccc;
   padding: 5px;
   font-size: 14px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 3px; */
+  @apply block w-full border border-gray-300 p-1 text-sm leading-6 rounded-md;
 }
 
 .input-checkbox {
-  font-size: 14px;
+  /* font-size: 14px;
   padding: 6px 8px 6px 4px;
   border-radius: 3px;
   border: 1px solid #ccc;
@@ -129,23 +146,26 @@
   margin-bottom: 0.5rem;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer; */
+  @apply text-sm p-2 pr-1 rounded-md border border-gray-300 mr-2 mb-2 inline-flex items-center cursor-pointer;
 }
 
 .input-label {
-  font-size: 14px;
+  /* font-size: 14px;
   display: block;
-  padding-bottom: 6px;
+  padding-bottom: 6px; */
+  @apply text-sm block pb-1.5;
 }
 
 .input-error {
-  font-size: 12px;
+  /* font-size: 12px;
   padding-top: 3px;
-  color: rgb(230, 43, 43);
+  color: rgb(230, 43, 43); */
+  @apply text-xs pt-1 text-red-600;
 }
 
 .submit-button {
-  display: block;
+  /* display: block;
   width: 100%;
   border: 0;
   padding: 0.75rem 1rem;
@@ -153,12 +173,15 @@
   color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   border-radius: 3px;
-  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 4px 5px 0 rgb(0 0 0 / 5%); */
+
+  @apply block w-full border-0 py-3 px-4 bg-[#fecc91] text-gray-600 cursor-pointer rounded-md shadow;
 }
 
 .submit-button:disabled {
-  opacity: 0.5;
+  /* opacity: 0.5;
   cursor: not-allowed;
-  box-shadow: none;
+  box-shadow: none; */
+  @apply opacity-50 cursor-not-allowed shadow-none;
 }
 /* FORM */
