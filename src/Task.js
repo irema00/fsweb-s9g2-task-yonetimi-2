@@ -14,6 +14,12 @@ const Task = ({ taskObj, onComplete }) => {
       ? ` ${timeLeft} left`
       : `${daysLeft} days left`;
 
+  const deadlineStyle =
+    daysLeft < 0
+      ? "bg-gray-200"
+      : daysLeft < 3
+      ? "bg-peach-500"
+      : "bg-mabel-500";
 
   return (
     <div className="task">
